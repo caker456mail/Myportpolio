@@ -1,10 +1,11 @@
-import { useState, useEffect, useMemo } from "react";
+import { useMemo } from "react";
 
 import { AgCharts } from "ag-charts-react";
 import type { AgChartOptions } from "ag-charts-community";
-import { ModuleRegistry, AllCommunityModule } from "ag-charts-community";
-ModuleRegistry.registerModules([AllCommunityModule]);
-
+import {ModuleRegistry,AllCommunityModule } from "ag-charts-community";
+ModuleRegistry.registerModules([
+    AllCommunityModule,
+]);
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 import { ProjectInfo } from "../feature/Project/ProjectInfo";
@@ -18,11 +19,7 @@ import { TechInfo } from "../feature/Tech/techinfo";
 
 const Home = () => {
   // 3. AG Charts 옵션 메모이제이션 (0 -> 목표값 트랜지션)
-  const barChartOptions = useMemo<AgChartOptions>(() => ({
-    animation: {
-      enabled: true,
-      duration: 1400,
-    },
+ const barChartOptions = useMemo<AgChartOptions>(() => ({
     theme: "ag-default-dark",
     data: ProjectInfo,
     title: { text: "프로젝트별 완성도 및 프로덕션 달성률" },
@@ -35,8 +32,8 @@ const Home = () => {
         yName: "진행률 (%)",
         fill: "#aa3bff",
         stroke: "#c084fc",
-        highlightStyle: {
-          item: {
+        highlight: {
+          highlightedItem: {
             fill: "#c084fc",
             stroke: "#ffffff",
             strokeWidth: 2,
@@ -45,7 +42,6 @@ const Home = () => {
       },
     ],
   }), []);
-
 
   return (
     <div style={{ maxWidth: "1120px", margin: "0 auto", textAlign: "left" }}>

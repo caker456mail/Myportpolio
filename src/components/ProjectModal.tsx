@@ -1,14 +1,11 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { createPortal } from "react-dom";
 import type { Projectinterface } from "../feature/Project/ProjectInfo";
 
-// deployUrl 확장을 위한 인터페이스 (Projectinterface에 아직 없다면 여기서 병합)
-export interface ExtendedProjectInterface extends Projectinterface {
-    deployUrl?: string;
-}
+
 
 interface ProjectModalProps {
-    project: ExtendedProjectInterface | null;
+    project: Projectinterface | null;
     onClose: () => void;
 }
 
@@ -391,6 +388,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                         display: "block",
                                     }}
                                     onError={(e) => {
+                                        console.error("이미지 로드 실패 경로:", project.images);
                                         e.currentTarget.style.display = "none";
                                         const parent = e.currentTarget.parentElement;
                                         if (parent) {

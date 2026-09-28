@@ -1,4 +1,4 @@
-import React, { useState, type ReactNode } from "react";
+import  { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 
 // 1. 공통 카드 래퍼 (Shell)

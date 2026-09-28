@@ -151,6 +151,7 @@ const Career = () => {
           {/* 대회 1: Start-App 캠프 */}
           {Growth.map((item) => (
             <div
+              key={item.title}
               style={{
                 backgroundColor: "rgba(255, 255, 255, 0.02)",
                 border: "1px solid rgba(255, 255, 255, 0.06)",

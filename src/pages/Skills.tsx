@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { AgCharts } from "ag-charts-react";
 import type { AgChartOptions } from "ag-charts-community";
 import { ModuleRegistry, AllCommunityModule } from "ag-charts-community";
@@ -35,7 +35,6 @@ const Skills = () => {
 
   const chartOptions = useMemo<AgChartOptions>(
     () => ({
-      animation: { enabled: true, duration: 1000 },
       theme: "ag-default-dark",
       background: { fill: "transparent" },
       data: chartData,
@@ -69,9 +68,7 @@ const Skills = () => {
           fills: ["#aa3bff", "#818cf8", "#34d399"],
           strokes: ["#0f172a"],
           strokeWidth: 2,
-          highlightStyle: {
-            item: { fill: "#d946ef" },
-          },
+     
         },
       ],
     }),

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { ProjectInfo } from "../feature/Project/ProjectInfo";
-import { ProjectModal, type ProjectItem } from "../components/ProjectModal";
+import { ProjectInfo, type Projectinterface } from "../feature/Project/ProjectInfo";
+import { ProjectModal } from "../components/ProjectModal";
 
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Projectinterface | null>(null);
 
   return (
     <section style={{ maxWidth: "1120px", margin: "0 auto", textAlign: "left", padding: "0 20px 60px 20px" }}>
