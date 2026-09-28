@@ -1,0 +1,77 @@
+export interface Projectinterface {
+  projectName: string,
+  category: string,
+  progress?: number,
+  tasks?: number,
+  period: string,
+  summary: string,
+  tech: string[],
+  date: string,
+  agency?: string,
+  pptUrl?: string,
+  githubUrl?: string,
+  images?: string;
+  deployUrl?: string;
+  warning?:string;
+};
+
+//   period: "개인 프로젝트",
+//   status: "In Progress (85%)",
+//   statusColor: "#c084fc",
+//   summary: "실시간 상영관 좌석 선택 알고리즘 및 트랜잭션 기반 중복 예매 방지 구현",
+//   impact: "낙관적 락(Optimistic Lock) 기법 적용으로 동시 좌석 선점 충돌 이슈 해결",
+//   tech: ["React", "TypeScript", "REST API", "Optimistic Lock"],
+export const ProjectInfo: Projectinterface[] = [
+  {
+    projectName: "영화 통합 예매 플랫폼",
+    category: "FullStack",
+    period: "개인 프로젝트",
+    progress: 25,
+    tasks: 48,
+    summary: "생성형 AI 툴을 활용해 기획부터 풀스택 개발 및 클라우드 배포까지 전 과정을 1인 주도",
+    tech: ["React", "Vite", "Spring", "PostgreDB", "Docker", "Render", "Vercel", "Supabase", "Git"],
+    date: "2026-08 ~ 진행중",
+    images: "/images/project/movie.png",
+    githubUrl: "https://github.com/caker456mail/moviewebsiteport",
+    deployUrl:"https://moviewebsiteport.vercel.app/",
+    warning:"Render 프리 티어의 Cold Start 정책으로 인해 초기 요청 시 10분 이상의 딜레이가 발생할 수 있습니다",
+  },
+  {
+    projectName: "(실무) 연락운임 정산 프로젝트",
+    category: "FrontEnd",
+    period: "실무 프로젝트",
+    progress: 100,
+    tasks: 48,
+    // [기존] 프론트 부분 및 데이터 수집 및 가공, 문서작업을 담당했습니다.
+    summary: "Ag-Grid 기반 정산 UI 구현 및 기술 문서 작성 담당",
+    tech: ["React", "TypeScript", "AgGrid", "PostgreDB", "Git"],
+    date: "2026-04 ~ 2026-07",
+    images: "/images/project/soul.png",
+  },
+  {
+    projectName: "(메인) 생성형 AI PDF 분류 프로젝트",
+    category: "FullStack",
+    period: "팀 프로젝트",
+    progress: 70,
+    tasks: 48,
+    summary: "생성형 AI를 사용한 PDF 문서 자동 카테고리 분류 풀스택 개발",
+    tech: ["Gemma3", "BERT", "PaddleOCR", "React", "FastAPI"],
+    date: "2025-10 ~ 2025-11",
+    images: "/images/project/Mainproject.png",
+    pptUrl: "https://docs.google.com/presentation/d/1frj1kA-6V2YZLCujuzJYZCWmN61z6J_3/edit?usp=sharing&ouid=104760289653938447661&rtpof=true&sd=true",
+    githubUrl: "https://github.com/caker456/Main_Project_Fianal",
+  },
+  {
+    projectName: "(미니) PDF문서 요약 웹 페이지 제작",
+    category: "FullStack",
+    period: "팀 프로젝트",
+    progress: 100,
+    tasks: 48,
+    summary: "PaddleOCR 기반 텍스트 추출 및 AI 요약 알고리즘을 연동한 웹 인터페이스 구축",
+    tech: ["PostgreDB", "PaddleOCR", "React", "FastAPI"],
+    date: "2025-09 ~ 2025-10",
+    images: "/images/project/Miniproject.png",
+    pptUrl: "https://docs.google.com/presentation/d/18Hb0DyEEPEUj8KCAipvtrbyTfLJBTs6m/edit?usp=sharing&ouid=104760289653938447661&rtpof=true&sd=true",
+    githubUrl: "https://github.com/caker456/Main_Project",
+  }
+];

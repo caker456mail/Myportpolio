@@ -1,0 +1,18 @@
+export const TechInfo = [
+    "React",
+  "TypeScript",
+  "JavaScript",
+  "HTML5",
+  "CSS",
+  "FastAPI",
+  "Spring Boot",
+  "Java",
+  "PostgreDB",
+  "RESTful API",
+  "Gemma 3",
+  "Ollama",
+  "AG Grid",
+  "PyPDF2",
+  "Git",
+  "Unity",
+];
