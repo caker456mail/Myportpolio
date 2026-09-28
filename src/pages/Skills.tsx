@@ -38,6 +38,7 @@ const Skills = () => {
       theme: "ag-default-dark",
       background: { fill: "transparent" },
       data: chartData,
+      
       title: {
         text: "보유 기술 도메인 분포",
         color: "#f8fafc",
@@ -68,7 +69,9 @@ const Skills = () => {
           fills: ["#aa3bff", "#818cf8", "#34d399"],
           strokes: ["#0f172a"],
           strokeWidth: 2,
-     
+          highlight: {
+           highlightedItem: { fill: "#d946ef" },
+          },
         },
       ],
     }),

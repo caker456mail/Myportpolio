@@ -43,3 +43,6 @@ body {
   margin-bottom: 14px;
   border: 1px solid rgba(170, 59, 255, 0.3);
 }
+.print-only-container {
+  display: none !important;
+}

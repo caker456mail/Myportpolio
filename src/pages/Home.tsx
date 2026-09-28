@@ -2,9 +2,9 @@ import { useMemo } from "react";
 
 import { AgCharts } from "ag-charts-react";
 import type { AgChartOptions } from "ag-charts-community";
-import {ModuleRegistry,AllCommunityModule } from "ag-charts-community";
+import { ModuleRegistry, AllCommunityModule } from "ag-charts-community";
 ModuleRegistry.registerModules([
-    AllCommunityModule,
+  AllCommunityModule,
 ]);
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
@@ -19,10 +19,17 @@ import { TechInfo } from "../feature/Tech/techinfo";
 
 const Home = () => {
   // 3. AG Charts 옵션 메모이제이션 (0 -> 목표값 트랜지션)
- const barChartOptions = useMemo<AgChartOptions>(() => ({
+  const barChartOptions = useMemo<AgChartOptions>(() => ({
     theme: "ag-default-dark",
     data: ProjectInfo,
     title: { text: "프로젝트별 완성도 및 프로덕션 달성률" },
+    // 👇 차트 내부 여백을 주어 긴 글씨가 잘리지 않게 방지합니다.
+    padding: {
+      top: 20,
+      bottom: 20,
+      left: 40, // 왼쪽 라벨 공간 확보
+      right: 20,
+    },
     series: [
       {
         type: "bar",
@@ -110,7 +117,7 @@ const Home = () => {
       <HomeCard
         title="경력 / 교육"
         to="/career"
-       >
+      >
         <HomeProjectList items={CareerInfo} />
 
       </HomeCard>
